@@ -19,9 +19,9 @@ public class VolunteerPlatformApplication {
 		return args -> {
 			System.out.println("Let's inspect the beans provided by Spring Boot:");
 			String[] beanNames = ctx.getBeanDefinitionNames();
-			for (String beanName : beanNames) {
-				System.out.println(beanName);
-			}
+//			for (String beanName : beanNames) {
+//				System.out.println(beanName);
+//			}
 		};
 	}
 
