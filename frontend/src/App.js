@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import OpportunityList from './components/OpportunityList';
+import OpportunityForm from './components/OpportunityForm';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import PrivateRoute from "./components/PrivateRoute";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Fuck you and Merry Christmas.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          You're a pussy.
-        </a>
-      </header>
-    </div>
+      <Router>
+        <Navbar />
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/create"
+                   element={
+                      <PrivateRoute>
+                        <OpportunityForm />
+                      </PrivateRoute>
+                   }
+            />
+            <Route path="/opportunities" element={<OpportunityList />} />
+          </Routes>
+        </div>
+      </Router>
   );
-}
+};
 
 export default App;

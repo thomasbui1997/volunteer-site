@@ -14,3 +14,8 @@ A web app to post and find volunteer oppoortunities.
 2. Run the Spring Boot application:
 ```bash
 ./mvnw spring-boot:run
+```
+
+## Dependencies
+1. 
+2. Framer Motion

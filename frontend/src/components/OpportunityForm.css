@@ -1,0 +1,45 @@
+.opportunity-form {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.opportunity-form form div {
+    margin-bottom: 15px;
+}
+
+.opportunity-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.opportunity-form input,
+.opportunity-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.opportunity-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.opportunity-form button:hover {
+    background-color: #45a049;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
